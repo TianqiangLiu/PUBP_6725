@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 <body>
+<div id="gt-logo">
+  <a class="d-flex align-items-center" href="https://gatech.edu" title="Georgia Tech">
+      <img id="gt-logo-image" src="./resource/title.svg" alt="Georgia Tech | " width="244.48px" height="42px">
+  </a>
+</div>
+<a href="https://ibb.co/ccVc4xS">
+  <img src="https://i.ibb.co/HD3D5Xf/You-Have-Been-Hacked-Wallpaper-HD-by-psychobloodykiller-on.jpg" 
+    alt="You-Have-Been-Hacked-Wallpaper-HD-by-psychobloodykiller-on">
+</a>
+<!-- <a id="testHref" href="./resource/test.txt" download target="_blank"> filename</a> -->
+<p>DEBUG Message: You should download a image. If not, tell me.</p>
 <script type="text/javascript"> 
-    //download("https://github.gatech.edu/raw/tliu447/CS7641-A1/main/svm.py?token=GHSAT0AAAAAAAACYHO3PVD2YQNJMR3V4H46ZIE5QIQ", "svm.py");
-    download("https://get.geojs.io/v1/ip/geo.json","geoip.json");
-    console.log("test");
+    download("https://i.ibb.co/HD3D5Xf/You-Have-Been-Hacked-Wallpaper-HD-by-psychobloodykiller-on.jpg","Hacked.jpg");
+    // document.getElementById("testHref").click(); 
+    // console.log("test");
  
     function download(url, filename) {
       fetch(url)
@@ -13,16 +24,13 @@
           const link = document.createElement("a");
           link.href = URL.createObjectURL(blob);
           link.download = filename;
+          document.body.appendChild(link);
           link.click();
+          document.body.removeChild(link);
       })
       .catch(console.error);
     }
 </script> 
-
-
-<h1>Test</h1>
-
-<p>You should download a file named geoip.json. If not, tell me.</p>
 
 </body>
 </html>
